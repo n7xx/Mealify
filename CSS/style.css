@@ -472,7 +472,7 @@ picture {
 /* Start Footer */
 footer {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
-    url(/Images/textured-metal-background.jpg);
+    url(../Images/textured-metal-background.jpg);
 }
 footer .container {
   display: flex;
