@@ -21,6 +21,8 @@
     />
     <!-- Main CSS -->
     <link rel="stylesheet" href="./CSS/style.css" />
+    <!-- Dark mode file -->
+    <link rel="stylesheet" href="./CSS/dark.mode.css">
     <!-- Media Queries -->
     <link rel="stylesheet" href="./CSS/media.css" />
     <!-- Animation File -->
@@ -29,34 +31,39 @@
   </head>
   <body>
     <!-- Start Navbar -->
-    <div id="nav">
+    <div class="nav" id="nav">
       <div class="container">
         <h1 class="logo"><a href="#">Mealify</a></h1>
-        <div class="nav-icons">
-          <div class="mode-icon">
-            <i class="fa-solid fa-moon"></i>
-            <i class="fa-regular fa-sun light"></i>
-          </div>
-          <div class="bars-icon">
-            <a><i class="fa-solid fa-bars"></i></a>
-          </div>
-        </div>
-        <div class="nav-links">
+        <div class="nav-links" id="nav-links">
           <div class="close-icon">
             <a href="#"> <i class="fa-solid fa-xmark"></i></a>
           </div>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Chefs</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Contact</a></li>
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#chefs">Chefs</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact-us">Contact</a></li>
           </ul>
+        </div>
+        <div class="nav-icons">
+          <div class="mode-group">
+            <label for="mode" class="dark">
+              <i class="fa-solid fa-moon"></i>
+            </label>
+            <label for="mode" class="light">
+              <i class="fa-regular fa-sun light"></i>
+            </label>
+            <input type="checkbox" id="mode" class="mode" hidden aria-hidden />
+          </div>
+          <div class="bars-icon">
+            <a href="#nav-links"><i class="fa-solid fa-bars"></i></a>
+          </div>
         </div>
       </div>
     </div>
     <!-- End Navbar -->
     <!-- Start Home -->
-    <div id="home">
+    <div class="home" id="home">
       <div class="container">
         <div class="home-content">
           <h2>
@@ -87,7 +94,7 @@
     </div>
     <!-- End Home -->
     <!-- Start Chefs -->
-    <div id="chefs">
+    <div class="chefs" id="chefs">
       <div class="container">
         <div class="section-title">
           <h2>chefs</h2>
@@ -213,7 +220,7 @@
     </div>
     <!-- End Chefs -->
     <!-- Start Gallery -->
-    <div id="gallery">
+    <div class="gallery" id="gallery">
       <div class="container">
         <div class="section-title">
           <h2>Gallery</h2>
@@ -294,7 +301,7 @@
     </div>
     <!-- End Gallery -->
     <!-- Start Contaact Us -->
-    <div id="contact-us">
+    <div class="contact-us" id="contact-us">
       <div class="container">
         <div class="section-title">
           <h2>contact</h2>
@@ -350,7 +357,12 @@
         </div>
         <form>
           <div class="inputs-container">
-            <input type="text" placeholder="Your Name" name="name" />
+            <input
+              class="username"
+              type="text"
+              placeholder="Your Name"
+              name="name"
+            />
             <input type="email" placeholder="Your Email" name="email" />
           </div>
           <input type="text" placeholder="Subject" name="subject" />

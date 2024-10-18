@@ -1,0 +1,229 @@
+@media screen and (max-width: 300px) {
+  :root {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 569px) and (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+  .chefs-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.9375rem 2%;
+  }
+  .chef-item {
+    flex-basis: calc(100% / 2 - 2%);
+  }
+  /* #gallery {
+    height: 1600px;
+  } */
+  .gallery-images {
+    column-count: 2;
+  }
+
+  .contact-details .contact {
+    flex-basis: calc(100% / 2 - 2%);
+    padding: 0.625rem 1.25rem;
+  }
+
+  #contact-us form .inputs-container input {
+    flex-basis: 48.5%;
+  }
+  footer .container {
+    gap: 0.75rem;
+  }
+  .about {
+    flex-basis: calc(100% / 2 - 2%);
+    order: -2;
+  }
+  .contact-us-details {
+    flex-basis: 50%;
+    order: -1;
+  }
+  .supscription-inputs {
+    flex-direction: row;
+  }
+  .supscription-inputs input {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+  #home .container {
+    padding: 7rem 0 1.25rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3.125rem;
+  }
+  #home .container > * {
+    width: 40%;
+    text-align: left;
+  }
+  .home-btns .btn-main {
+    padding: 0.625rem 1.5rem;
+    border-radius: 0px 100vh 100vh;
+  }
+
+  .chefs-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.9375rem 1.5%;
+  }
+  .chef-item {
+    flex-basis: calc(100% / 3 - 1.5%);
+  }
+  .gallery-images {
+    column-count: 3;
+  }
+
+  .contact-details .contact {
+    flex-basis: calc(100% / 2 - 1%);
+    padding: 10px 20px;
+  }
+
+  #contact-us form .inputs-container input {
+    flex-basis: 48.8%;
+  }
+  footer .container {
+    gap: 12px;
+  }
+  .about {
+    flex-basis: 60%;
+    order: -2;
+  }
+  .contact-us-details {
+    order: -1;
+    flex-basis: 38%;
+  }
+  .supscription-inputs {
+    flex-direction: row;
+  }
+  .supscription-inputs input {
+    width: 85%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+  .bars-icon,
+  .close-icon {
+    display: none;
+  }
+
+  #nav .container {
+    justify-content: space-between;
+  }
+  .nav-links {
+    position: static;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    box-shadow: none;
+    width: auto;
+    padding: 0;
+  }
+  .nav-links li {
+    padding: 0 1rem;
+  }
+  .nav-links li::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 16px;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width var(--animation-duration);
+  }
+  .nav-links li:hover::after,
+  li.active::after {
+    width: 55px;
+  }
+  .nav-links ul {
+    display: flex;
+    margin-top: 0;
+  }
+  #home .container {
+    padding: 14rem 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3.125rem;
+  }
+  #home .container > * {
+    width: 40%;
+    text-align: left;
+  }
+  .home-btns .btn-main {
+    padding: 0.625rem 1.5rem;
+    border-radius: 0px 100vh 100vh;
+  }
+
+  .chefs-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.9375rem 1.5%;
+  }
+  .chef-item {
+    flex-basis: calc(100% / 3 - 1.5%);
+  }
+  .gallery-images {
+    column-count: 3;
+  }
+
+  .contact-details .contact {
+    flex-basis: calc(100% / 2 - 1%);
+    padding: 10px 20px;
+  }
+
+  #contact-us form .inputs-container input {
+    flex-basis: 49%;
+  }
+  footer .container {
+    padding: 50px 10px;
+    font-size: 14px;
+    gap: 15px;
+  }
+  .about,
+  .contact-us-details {
+    flex-basis: calc(25% - 15px);
+  }
+  .subscription {
+    flex-basis: calc(50% - 15px);
+  }
+  .supscription-inputs {
+    flex-direction: row;
+  }
+  .supscription-inputs input {
+    width: 74.9%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .container {
+    max-width: 1600px;
+  }
+
+  #home .container > * {
+    width: 40%;
+    text-align: left;
+  }
+}
