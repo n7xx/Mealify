@@ -6,7 +6,8 @@
   --text-secondary: #505050;
   --text-tertiary: #7f7f90;
   --section-bg: #eee;
-  --card-bg: #eee;
+  --card-bg: #fff;
+  --contact-bg: #eee;
   --card-shadow: rgba(0, 0, 0, 0.1);
   --border-color: #eee;
   --input-bg: #fff;
@@ -16,18 +17,19 @@
 :root:has(.mode:checked) {
   --primary-color: #c17e1f;
   --bg-color: #1a1a1a;
-  --nav-bg: #242424;
+  --nav-bg: #262626;
   --text-color: #e0e0e0;
   --text-secondary: #adadad;
   --text-tertiary: #9f9f9f;
   --section-bg: #242424;
   --card-bg: #161616;
+  --contact-bg: #161616;
   --card-shadow: rgba(0, 0, 0, 0.2);
   --border-color: #363636;
   --input-bg: #242424;
   --input-border: #363636;
 }
-.btn-main:hover {
+:root:has(.mode:checked) .btn-main:hover {
   background-color: #a35f00;
 }
 body {
@@ -54,12 +56,10 @@ body {
   color: var(--text-tertiary);
 }
 
-
-
 /* Active Navigation Links in Dark Mode */
 body:not(body:has(:target)):has(.mode:checked) li a[href="#home"],
 body:has(.home:target):has(.mode:checked) li a[href="#home"],
-body:has(.contact:target):has(.mode:checked) li a[href="#contact"],
+body:has(.contact-us:target):has(.mode:checked) li a[href="#contact-us"],
 body:has(.gallery:target):has(.mode:checked) li a[href="#gallery"],
 body:has(.chefs:target):has(.mode:checked) li a[href="#chefs"] {
   color: #fff;
@@ -106,7 +106,7 @@ body:has(.chefs:target):has(.mode:checked) li a[href="#chefs"] {
 
 /* Contact Section */
 .contact-details .contact {
-  background-color: var(--card-bg);
+  background-color: var(--contact-bg);
 }
 
 .contact .contact-content h3 {
@@ -137,12 +137,6 @@ body:has(.chefs:target):has(.mode:checked) li a[href="#chefs"] {
   color: var(--text-color);
 }
 
-/* Footer Adjustments */
-:root:has(.mode:checked) footer {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)),
-    url(../Images/textured-metal-background.jpg);
-}
-
 /* Scrollbar */
 :root:has(.mode:checked) ::-webkit-scrollbar {
   background-color: var(--nav-bg);
@@ -163,5 +157,5 @@ body:has(.chefs:target):has(.mode:checked) li a[href="#chefs"] {
 
 /* Special Image Adjustments for Dark Mode */
 :root:has(.mode:checked) .chef-item picture::before {
-  background-image: url(/Images/team-shape-dark.svg);
+  background-image: url(../Images/team-shape-dark.svg);
 }

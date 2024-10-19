@@ -30,7 +30,6 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 5.625rem;
 }
 body {
   font-family: var(--default-font);
@@ -184,6 +183,13 @@ picture {
   top: 0.675rem;
   color: var(--tertiary-color);
 }
+
+body:has(.home:target) li a[href="#home"],
+body:has(.contact-us:target) li a[href="#contact-us"],
+body:has(.gallery:target) li a[href="#gallery"],
+body:has(.chefs:target) li a[href="#chefs"] {
+  color: #222;
+}
 /* End navbar */
 /* Start Home */
 #home {
@@ -321,7 +327,7 @@ picture {
   width: 100%;
   height: 4rem;
   background-repeat: repeat-x;
-  background-image: url(/Images/team-shape.svg);
+  background-image: url(../Images/team-shape.svg);
 }
 .chef-contnet {
   padding: 1rem 1.5rem 1.5rem;
