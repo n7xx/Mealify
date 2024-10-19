@@ -76,6 +76,7 @@ body:has(.chefs:target):has(.mode:checked) li a[href="#chefs"] {
 .video-btn .icon::before {
   background-color: var(--bg-color);
 }
+
 #home picture img {
   filter: drop-shadow(4px 4px 9px rgba(143, 143, 143, 0.667));
 }

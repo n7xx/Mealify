@@ -1,4 +1,5 @@
 /* MOBILE FIRST */
+
 /* START GLOBAL STYLE */
 :root {
   --default-color: #212529;
@@ -152,7 +153,7 @@ picture {
   right: -100%;
   bottom: 0;
   top: 0;
-  width: 70%;
+  width: 40%;
   padding: 0.675rem;
   background-color: var(--color-light);
   box-shadow: 0px 0px 0.84rem 0px #0000001b;
@@ -170,8 +171,21 @@ picture {
   font-weight: 600;
   transition: all var(--animation-duration);
 }
+.nav-links li::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width var(--animation-duration);
+}
 .nav-links:target {
   right: 0;
+}
+.nav-links:target li::after {
+  width: 0;
 }
 .nav-links li:hover {
   color: var(--secondary-color);
@@ -351,17 +365,17 @@ body:has(.chefs:target) li a[href="#chefs"] {
   padding: 2.5rem 0.625rem;
 }
 .gallery-images {
-  column-count: 1;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   gap: 1.25rem;
 }
 .gallery-images picture {
   position: relative;
-  background-color: var(--color-light);
+  width: 100%;
   border: 5px solid var(--color-light);
   overflow: hidden;
-  break-inside: avoid;
-  margin-bottom: 1.25rem;
-  max-height: 100%;
 }
 .gallery-images picture .layer {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
@@ -388,8 +402,6 @@ body:has(.chefs:target) li a[href="#chefs"] {
 .gallery-images picture img {
   width: 100%;
   transition: all var(--animation-duration);
-  height: auto;
-  display: block;
 }
 .gallery-images picture:hover img {
   transform: scale(1.1);
