@@ -16,7 +16,6 @@
   --secondary-font: "Inter", sans-serif;
   --animation-duration: 0.4s;
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -28,7 +27,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 html {
   scroll-behavior: smooth;
 }
@@ -56,25 +54,16 @@ body {
   background-color: var(--light-primary-color);
   color: #fff;
 }
-ul {
-  list-style: none;
-}
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
+ul {list-style: none;}
+a {color: inherit;
+  text-decoration: none;}
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
-  font-family: var(--secondary-font);
-}
-.light {
-  display: none;
-}
+h6 {font-family: var(--secondary-font);}
+.light {display: none;}
 .container {
   width: 95%;
   margin: auto;
@@ -88,9 +77,7 @@ h6 {
   font-size: 0.9375rem;
   transition: all 0.4s;
 }
-.btn-main:hover {
-  background-color: #a10606;
-}
+.btn-main:hover {background-color: #a10606;}
 .section-title {
   text-align: center;
   padding: 1.875rem;
@@ -181,15 +168,9 @@ picture {
   background-color: var(--primary-color);
   transition: width var(--animation-duration);
 }
-.nav-links:target {
-  right: 0;
-}
-.nav-links:target li::after {
-  width: 0;
-}
-.nav-links li:hover {
-  color: var(--secondary-color);
-}
+.nav-links:target {right: 0;}
+.nav-links:target li::after {width: 0;}
+.nav-links li:hover {color: var(--secondary-color);}
 .close-icon {
   position: absolute;
   font-size: 1.875rem;
@@ -269,21 +250,14 @@ body:has(.chefs:target) li a[href="#chefs"] {
   border-radius: 50%;
   position: absolute;
 }
-.video-btn .icon i {
-  z-index: 20;
-}
-.video-btn:hover {
-  color: var(--primary-color);
-}
+.video-btn .icon i {z-index: 20;}
+.video-btn:hover {color: var(--primary-color);}
 #home picture img {
   width: 100%;
   display: block;
   filter: drop-shadow(4px 4px 9px #000a);
 }
-#home picture img:hover {
-  animation: shake 1s infinite;
-}
-
+#home picture img:hover {animation: shake 1s infinite;}
 /* End Home */
 /* Start Chefs */
 #chefs {
@@ -320,15 +294,9 @@ body:has(.chefs:target) li a[href="#chefs"] {
   color: #37373f66;
   transition: color 0.8s;
 }
-.social-medial-layer li:hover {
-  color: var(--default-color);
-}
-.chef-item:hover {
-  transform: scale(1.05);
-}
-.chef-item:hover .social-medial-layer {
-  right: 0.5rem;
-}
+.social-medial-layer li:hover {color: var(--default-color);}
+.chef-item:hover {transform: scale(1.05);}
+.chef-item:hover .social-medial-layer {right: 0.5rem;}
 .chef-item picture {
   position: relative;
   width: 100%;
@@ -343,10 +311,7 @@ body:has(.chefs:target) li a[href="#chefs"] {
   background-repeat: repeat-x;
   background-image: url(../Images/team-shape.svg);
 }
-.chef-contnet {
-  padding: 1rem 1.5rem 1.5rem;
-}
-
+.chef-contnet {padding: 1rem 1.5rem 1.5rem;}
 .chef-contnet span {
   display: block;
   font-size: 0.875rem;
@@ -365,7 +330,6 @@ body:has(.chefs:target) li a[href="#chefs"] {
   padding: 2.5rem 0.625rem;
 }
 .gallery-images {
-
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -396,16 +360,12 @@ body:has(.chefs:target) li a[href="#chefs"] {
   font-size: 0.9375rem;
   color: var(--color-light-grey);
 }
-.gallery-images picture:hover .layer {
-  top: 0;
-}
+.gallery-images picture:hover .layer {top: 0;}
 .gallery-images picture img {
   width: 100%;
   transition: all var(--animation-duration);
 }
-.gallery-images picture:hover img {
-  transform: scale(1.1);
-}
+.gallery-images picture:hover img {transform: scale(1.1);}
 /* End Gallery */
 /* Start Contact Us */
 #contact-us {
@@ -463,9 +423,7 @@ body:has(.chefs:target) li a[href="#chefs"] {
   flex-wrap: wrap;
   gap: 1.25rem;
 }
-#contact-us form .inputs-container input {
-  flex-basis: 100%;
-}
+#contact-us form .inputs-container input {flex-basis: 100%;}
 #contact-us form > * {
   width: 100%;
 }
@@ -513,9 +471,7 @@ footer .container {
   width: 2.5rem;
   height: 2.5rem;
 }
-.about .logo-disc h2 {
-  color: var(--color-light);
-}
+.about .logo-disc h2 {color: var(--color-light);}
 .about p {
   color: var(--color-light-grey);
   margin: 0.625rem 0;
@@ -538,12 +494,9 @@ footer .container {
   font-size: 1.5rem;
 }
 .subscription,
-.about {
-  width: 100%;
-}
-.subscription-content {
-  color: white;
-}
+.about,
+.contact-us-details {width: 100%;}
+.subscription-content {color: white;}
 .subscription-content p {
   font-size: 0.9375rem;
   color: var(--color-light-grey);
@@ -562,12 +515,8 @@ footer .container {
   border: 2px solid var(--color-light-grey);
   border-radius: 5px;
 }
-.supscription-inputs button {
-  border-radius: 5px;
-}
-.subscription-links {
-  color: var(--color-light);
-}
+.supscription-inputs button {border-radius: 5px;}
+.subscription-links {color: var(--color-light);}
 .subscription-links ul {
   display: flex;
   flex-wrap: wrap;
@@ -589,7 +538,6 @@ footer .container {
   border-radius: 5px;
 }
 .contact-us-details {
-  width: 100%;
   color: white;
   margin: 0.625rem 0;
 }
