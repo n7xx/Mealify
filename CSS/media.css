@@ -267,9 +267,6 @@
     width: 28%;
     text-align: left;
   }
-  .home-content p {
-    margin: 1.25rem 1.8rem;
-  }
   #contact-us form .inputs-container input {
     flex-basis: 49.2%;
   }
