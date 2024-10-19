@@ -406,7 +406,6 @@ body:has(.chefs:target) li a[href="#chefs"] {
 .gallery-images picture:hover img {
   transform: scale(1.1);
 }
-
 /* End Gallery */
 /* Start Contact Us */
 #contact-us {
@@ -417,7 +416,6 @@ body:has(.chefs:target) li a[href="#chefs"] {
   height: 21.875rem;
   box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.1);
 }
-
 #contact-us .contact-details {
   display: flex;
   flex-wrap: wrap;
@@ -488,7 +486,6 @@ body:has(.chefs:target) li a[href="#chefs"] {
   max-height: 18.75rem;
   resize: vertical;
 }
-
 #contact-us form button {
   width: fit-content;
   margin-top: 1.125rem;

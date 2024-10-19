@@ -1,5 +1,6 @@
 :root {
   --primary-color: #ce1212;
+  --light-primary-color: #ff6b6b;
   --bg-color: #fff;
   --nav-bg: #fff;
   --text-color: #212529;
@@ -13,12 +14,12 @@
   --input-bg: #fff;
   --input-border: #eee;
 }
-
 :root:has(.mode:checked) {
   --primary-color: #c17e1f;
+  --light-primary-color: #d5b993;
   --bg-color: #1a1a1a;
   --nav-bg: #262626;
-  --text-color: #e0e0e0;
+  --text-color: #ffffff;
   --text-secondary: #adadad;
   --text-tertiary: #9f9f9f;
   --section-bg: #242424;
@@ -36,27 +37,21 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
 }
-:root:has(.mode:checked) .mode-group .dark {
-  display: none;
-}
+:root:has(.mode:checked) .mode-group .dark {display: none;}
+:root:has(.mode:checked) .mode-group .light {display: block;}
 
-:root:has(.mode:checked) .mode-group .light {
-  display: block;
-}
-
+/* Navbar */
 #nav {
   background-color: var(--nav-bg);
 }
-
 .nav-links {
   background-color: var(--nav-bg);
 }
-
 .nav-links li {
   color: var(--text-tertiary);
 }
 
-/* Active Navigation Links in Dark Mode */
+/* Active Navigation Links */
 body:not(body:has(:target)):has(.mode:checked) li a[href="#home"],
 body:has(.home:target):has(.mode:checked) li a[href="#home"],
 body:has(.contact-us:target):has(.mode:checked) li a[href="#contact-us"],
@@ -65,30 +60,26 @@ body:has(.chefs:target):has(.mode:checked) li a[href="#chefs"] {
   color: #fff;
 }
 
-/* home Sections */
+/* Home */
 #home {
   background-color: var(--section-bg);
 }
-
 .home-content p {
   color: var(--text-tertiary);
 }
 .video-btn .icon::before {
   background-color: var(--bg-color);
 }
-
 #home picture img {
   filter: drop-shadow(4px 4px 9px rgba(143, 143, 143, 0.667));
 }
-/* Chefs Section */
+/* Chefs */
 .chef-item {
   background-color: var(--card-bg);
   box-shadow: 3px 3px 15px 0px var(--card-shadow);
 }
-
 .social-medial-layer {
-  background-color: #ffffff44;
-  opacity: 0.9;
+  background-color: #86868644;
 }
 
 .chef-contnet span,
@@ -96,7 +87,7 @@ body:has(.chefs:target):has(.mode:checked) li a[href="#chefs"] {
   color: var(--text-tertiary);
 }
 
-/* Gallery Section */
+/* Gallery */
 #gallery {
   background-color: var(--section-bg);
 }
@@ -105,35 +96,30 @@ body:has(.chefs:target):has(.mode:checked) li a[href="#chefs"] {
   background-color: var(--card-bg);
 }
 
-/* Contact Section */
+/* Contact  */
 .contact-details .contact {
   background-color: var(--contact-bg);
 }
-
 .contact .contact-content h3 {
   color: var(--text-secondary);
 }
-
 .contact .contact-content p {
   color: var(--text-tertiary);
 }
-
 #contact-us form {
   background-color: var(--input-bg);
   box-shadow: 3px 3px 0.9375rem 0px var(--card-shadow);
 }
-
 #contact-us form :is(input, textarea) {
   background-color: var(--input-bg);
   border-color: var(--input-border);
   color: var(--text-color);
 }
 
-/* Section Titles */
+/* Section Title */
 .section-title h2 {
   color: var(--text-secondary);
 }
-
 .section-title p {
   color: var(--text-color);
 }
@@ -151,12 +137,9 @@ body:has(.chefs:target):has(.mode:checked) li a[href="#chefs"] {
   color: var(--text-color);
 }
 
-/* Navigation Hover States */
 :root:has(.mode:checked) .nav-links li:hover {
   color: #fff;
 }
-
-/* Special Image Adjustments for Dark Mode */
 :root:has(.mode:checked) .chef-item picture::before {
   background-image: url(../Images/team-shape-dark.svg);
 }
