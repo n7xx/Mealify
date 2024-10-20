@@ -14,6 +14,8 @@
   --input-bg: #fff;
   --input-border: #eee;
 }
+
+/* Start Dark Mode */
 :root:has(.mode:checked) {
   --primary-color: #c17e1f;
   --light-primary-color: #d5b993;
@@ -47,21 +49,22 @@ body:not(body:has(:target)):has(.mode:checked) li a[href="#home"],
 body:has(.home:target):has(.mode:checked) li a[href="#home"],
 body:has(.contact-us:target):has(.mode:checked) li a[href="#contact-us"],
 body:has(.gallery:target):has(.mode:checked) li a[href="#gallery"],
-body:has(.chefs:target):has(.mode:checked) li a[href="#chefs"] {
-  color: #fff;
-}
+body:has(.chefs:target):has(.mode:checked) li a[href="#chefs"] {color: #fff;}
 /* Home */
 #home {background-color: var(--section-bg);}
 .home-content p {color: var(--text-tertiary);}
 .video-btn .icon::before {background-color: var(--bg-color);}
-#home picture img {filter: drop-shadow(4px 4px 9px rgba(143, 143, 143, 0.667));}
+#home picture img {
+  -webkit-filter: drop-shadow(4px 4px 9px rgba(143, 143, 143, 0.667));
+  filter: drop-shadow(4px 4px 9px rgba(143, 143, 143, 0.667));
+}
 /* Chefs */
 .chef-item {
   background-color: var(--card-bg);
+  -webkit-box-shadow: 3px 3px 15px 0px var(--card-shadow);
   box-shadow: 3px 3px 15px 0px var(--card-shadow);
 }
 .social-medial-layer {background-color: #86868644;}
-
 .chef-contnet span,
 .chef-contnet p {color: var(--text-tertiary);}
 /* Gallery */
@@ -73,6 +76,7 @@ body:has(.chefs:target):has(.mode:checked) li a[href="#chefs"] {
 .contact .contact-content p {color: var(--text-tertiary);}
 #contact-us form {
   background-color: var(--input-bg);
+  -webkit-box-shadow: 3px 3px 0.9375rem 0px var(--card-shadow);
   box-shadow: 3px 3px 0.9375rem 0px var(--card-shadow);
 }
 #contact-us form :is(input, textarea) {
@@ -94,6 +98,9 @@ body:has(.chefs:target):has(.mode:checked) li a[href="#chefs"] {
   border-color: var(--input-border);
   color: var(--text-color);
 }
-:root:has(.mode:checked) .nav-links li:hover {color: #fff;
+:root:has(.mode:checked) .nav-links li:hover {color: #fff;}
+:root:has(.mode:checked) .chef-item picture::before {
+  background-image: url(../Images/team-shape-dark.svg);
 }
-:root:has(.mode:checked) .chef-item picture::before {background-image: url(../Images/team-shape-dark.svg);}
+
+/* End Dark Mode */
