@@ -14,7 +14,6 @@
   --input-bg: #fff;
   --input-border: #eee;
 }
-
 /* Start Dark Mode */
 :root:has(.mode:checked) {
   --primary-color: #c17e1f;
@@ -36,24 +35,43 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
 }
-:root:has(.mode:checked) .btn-main:hover {background-color: #a35f00;}
-:root:has(.mode:checked) .mode-group .dark {display: none;}
-:root:has(.mode:checked) .mode-group .light {display: block;}
-
+:root:has(.mode:checked) .btn-main:hover {
+  background-color: #a35f00;
+}
+:root:has(.mode:checked) .mode-group .dark {
+  display: none;
+}
+:root:has(.mode:checked) .mode-group .light {
+  display: block;
+}
 /* Navbar */
-#nav {background-color: var(--nav-bg);}
-.nav-links {background-color: var(--nav-bg);}
-.nav-links li {color: var(--text-tertiary);}
+#nav {
+  background-color: var(--nav-bg);
+}
+.nav-links {
+  background-color: var(--nav-bg);
+}
+.nav-links li {
+  color: var(--text-tertiary);
+}
 /* Active Navigation Links */
 body:not(body:has(:target)):has(.mode:checked) li a[href="#home"],
 body:has(.home:target):has(.mode:checked) li a[href="#home"],
 body:has(.contact-us:target):has(.mode:checked) li a[href="#contact-us"],
 body:has(.gallery:target):has(.mode:checked) li a[href="#gallery"],
-body:has(.chefs:target):has(.mode:checked) li a[href="#chefs"] {color: #fff;}
+body:has(.chefs:target):has(.mode:checked) li a[href="#chefs"] {
+  color: #fff;
+}
 /* Home */
-#home {background-color: var(--section-bg);}
-.home-content p {color: var(--text-tertiary);}
-.video-btn .icon::before {background-color: var(--bg-color);}
+#home {
+  background-color: var(--section-bg);
+}
+.home-content p {
+  color: var(--text-tertiary);
+}
+.video-btn .icon::before {
+  background-color: var(--bg-color);
+}
 #home picture img {
   -webkit-filter: drop-shadow(4px 4px 9px rgba(143, 143, 143, 0.667));
   filter: drop-shadow(4px 4px 9px rgba(143, 143, 143, 0.667));
@@ -64,16 +82,30 @@ body:has(.chefs:target):has(.mode:checked) li a[href="#chefs"] {color: #fff;}
   -webkit-box-shadow: 3px 3px 15px 0px var(--card-shadow);
   box-shadow: 3px 3px 15px 0px var(--card-shadow);
 }
-.social-medial-layer {background-color: #86868644;}
+.social-medial-layer {
+  background-color: #86868644;
+}
 .chef-contnet span,
-.chef-contnet p {color: var(--text-tertiary);}
+.chef-contnet p {
+  color: var(--text-tertiary);
+}
 /* Gallery */
-#gallery {background-color: var(--section-bg);}
-.gallery-images picture {background-color: var(--card-bg);}
+#gallery {
+  background-color: var(--section-bg);
+}
+.gallery-images picture {
+  background-color: var(--card-bg);
+}
 /* Contact  */
-.contact-details .contact {background-color: var(--contact-bg);}
-.contact .contact-content h3 {color: var(--text-secondary);}
-.contact .contact-content p {color: var(--text-tertiary);}
+.contact-details .contact {
+  background-color: var(--contact-bg);
+}
+.contact .contact-content h3 {
+  color: var(--text-secondary);
+}
+.contact .contact-content p {
+  color: var(--text-tertiary);
+}
 #contact-us form {
   background-color: var(--input-bg);
   -webkit-box-shadow: 3px 3px 0.9375rem 0px var(--card-shadow);
@@ -85,8 +117,12 @@ body:has(.chefs:target):has(.mode:checked) li a[href="#chefs"] {color: #fff;}
   color: var(--text-color);
 }
 /* Section Title */
-.section-title h2 {color: var(--text-secondary);}
-.section-title p {color: var(--text-color);}
+.section-title h2 {
+  color: var(--text-secondary);
+}
+.section-title p {
+  color: var(--text-color);
+}
 /* Scrollbar */
 :root:has(.mode:checked) ::-webkit-scrollbar {
   background-color: var(--nav-bg);
@@ -98,9 +134,10 @@ body:has(.chefs:target):has(.mode:checked) li a[href="#chefs"] {color: #fff;}
   border-color: var(--input-border);
   color: var(--text-color);
 }
-:root:has(.mode:checked) .nav-links li:hover {color: #fff;}
+:root:has(.mode:checked) .nav-links li:hover {
+  color: #fff;
+}
 :root:has(.mode:checked) .chef-item picture::before {
   background-image: url(../Images/team-shape-dark.svg);
 }
-
 /* End Dark Mode */
